@@ -7,9 +7,9 @@ RUN pip3 install youtube_dl
 
 COPY yt-dl-archive-channels.py /bin
 
-# Execute script every hour
+# Execute script daily at midnight
 RUN touch /var/log/cron.log
-RUN (crontab -l ; echo "0 * * * * /bin/yt-dl-archive-channels.py /config/yt-dl-archive-channels.conf >> /var/log/cron.log 2>&1") | crontab
+RUN (crontab -l ; echo "0 0 * * * /bin/yt-dl-archive-channels.py /config/yt-dl-archive-channels.conf >> /var/log/cron.log 2>&1") | crontab
 
 # Volumes
 VOLUME ["/config/yt-dl-archive-channels.conf"]
