@@ -22,7 +22,7 @@ ydl_opts = {
     'write_all_thumbnails': True,              # Download thumbnail
     'writesubtitles': True,                    # Download subtitles
     'writeautomaticsub': True,                 # Download automatically generated subtitles
-    'subtitleslangs': 'en,fr',                 # Specify subtitles languages to download
+    'subtitleslangs': ['en', 'fr'],            # Specify subtitles languages to download
     'add_metadata': True,                      # Inject metadata in mkv video container
     'ignoreerror': True,                       # Ignore errors for videos that can't be downloaded
     'daterange': DateRange(downloadFromDate),  # Only download videos uploaded after date
