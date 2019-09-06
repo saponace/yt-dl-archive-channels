@@ -2,7 +2,7 @@ FROM ubuntu:19.04
 LABEL "Maintainer"="Remi Somdecoste-Lespoune <saponace@gmail.com>"
 
 RUN apt-get update && apt-get -y install cron python3.7 python3-pip
-RUN pip3 install youtube_dl
+RUN pip3 install youtube_dl==2019.9.1
 
 
 COPY yt-dl-archive-channels.py /bin
